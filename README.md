@@ -4,6 +4,12 @@
 
 - Agregué la app de react como se pedía
 
+## Desafío entregable 2
+
+- Metí el navbar como componente.
+- Cambié el nombre de la pestaña.
+- Metí favicon y logo al NavBar.
+
 Isabel Achurra.
 
 <!-- # Getting Started with Create React App
