@@ -10,6 +10,11 @@
 - Cambié el nombre de la pestaña.
 - Metí favicon y logo al NavBar.
 
+## Desafío entregable 3
+
+- Creé el componente CartWidget.js con su ícono y lo ubiqué en el navbar.
+- Creé el componente ItemListContainer.js con un greeting y que muestre el mensaje dentro de un contenedor.
+
 Isabel Achurra.
 
 <!-- # Getting Started with Create React App
