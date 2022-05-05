@@ -1,32 +1,18 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import React from "react";
-import { Component } from "react";
 
-class Boton extends Component {
-	render() {
-		return <Button variant="primary">{this.props.name}</Button>;
-	}
-}
+const Boton = ({ name }) => {
+	return <Button variant="primary">{name}</Button>;
+};
 
-class Greetings extends Component {
-	render() {
-		return <span>{this.props.name}</span>;
-	}
-}
+const Title = ({ name }) => {
+	return <p>{name}</p>;
+};
 
-class Title extends Component {
-	render() {
-		return <p>{this.props.name}</p>;
-	}
-}
-
-const ItemListContainer = () => {
+const ItemListContainer = ({ saludo }) => {
 	return (
 		<Container>
-			<h3>
-				Buenas tardes, <Greetings name="cliente"></Greetings>. ¿Qué producto
-				desea hoy?
-			</h3>
+			<h3>{saludo}</h3>
 			<br />
 			<br />
 			<Row>

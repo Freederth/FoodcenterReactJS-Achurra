@@ -11,7 +11,7 @@ function App() {
 				<NavBar></NavBar>
 			</header>
 			<main class="listaProductos">
-				<ItemListContainer></ItemListContainer>
+				<ItemListContainer saludo="Bienvenidos a mi tienda"></ItemListContainer>
 			</main>
 		</div>
 	);
