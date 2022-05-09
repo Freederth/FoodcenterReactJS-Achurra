@@ -7,8 +7,10 @@ import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import img4 from "../assets/img4.png";
 
+// array de produtos, o sea un array de objetos
 let listaProductos = [];
 
+// función creadora de una clase Producto, tengo esos productos en mi data.json
 function Producto(nombre, precio, stock, cantidad, categoria, id, img, title) {
 	this.nombre = nombre;
 	this.precio = precio;
@@ -19,6 +21,7 @@ function Producto(nombre, precio, stock, cantidad, categoria, id, img, title) {
 	this.img = img;
 	this.title = title;
 
+	// método de ayuda que permite facilitar las compras
 	this.venta = function (cantidadComprada) {
 		this.stock -= cantidadComprada;
 	};
@@ -34,12 +37,14 @@ const CardItem = ({ name, texto, img, stock, initial }) => {
 				<Card.Title>{name}</Card.Title>
 				<Card.Text>{texto}</Card.Text>
 			</Card.Body>
+			{/* aquí llamo el componente ItemCount */}
 			<ItemCount stock={stock} initial={initial}></ItemCount>
 		</Card>
 	);
 };
 
 // pienso después llamar mis productos desde el json que tengo armado acá abajo
+// ignora esto ernesto
 const ItemCaller = async () => {
 	const response = await axios("data.json");
 
@@ -62,6 +67,7 @@ const ItemCaller = async () => {
 };
 ItemCaller();
 
+// grilla de productos, por el momento tengo 4 para este demo
 const ItemListContainer = ({ saludo }) => {
 	return (
 		<Container>

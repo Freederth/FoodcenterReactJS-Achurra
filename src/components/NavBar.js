@@ -4,6 +4,7 @@ import React from "react";
 
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
+// este navbar es un componente sacado de react-bootstrap
 const NavBar = () => {
 	return (
 		<Navbar
