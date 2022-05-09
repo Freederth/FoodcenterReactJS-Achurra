@@ -10,8 +10,8 @@ function App() {
 			<header>
 				<NavBar></NavBar>
 			</header>
-			<main class="listaProductos">
-				<ItemListContainer saludo="Bienvenidos a mi tienda"></ItemListContainer>
+			<main className="listaProductos">
+				<ItemListContainer saludo="Bienvenidos a mi tienda de mascotas"></ItemListContainer>
 			</main>
 		</div>
 	);

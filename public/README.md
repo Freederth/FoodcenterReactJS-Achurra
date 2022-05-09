@@ -15,6 +15,13 @@
 - Creé el componente CartWidget.js con su ícono y lo ubiqué en el navbar.
 - Creé el componente ItemListContainer.js con un greeting y que muestre el mensaje dentro de un contenedor.
 
+## Desafío entregable 4
+
+- Creé el componente ItemCount para aumentar y bajar cantidades pedidas.
+- Agregué un data.json que usaré en el futuro en mi proyecto con los productos, estoy llamándolos con axios.
+- Desde ItemListContainer llamo cada producto, los valores del stock y el initial se los doy por prop, tal como pedía el desafío.
+- Le puse un poco de estilo a mis productos, utilizando Cards de bootstrap para react.
+
 Isabel Achurra.
 
 <!-- # Getting Started with Create React App

@@ -11,7 +11,7 @@ const NavBar = () => {
 			expand="lg"
 			bg="dark"
 			variant="dark"
-			defaultActiveKey="/home"
+			defaultactivekey="/home"
 		>
 			<Container>
 				<Navbar.Brand href="#home">
@@ -22,7 +22,7 @@ const NavBar = () => {
 					<Nav className="me-auto">
 						<Nav.Link href="#">Nosotros</Nav.Link>
 						<NavDropdown title="Productos" id="collasible-nav-dropdown">
-							<NavDropdown.Item defaultActiveKey="#">
+							<NavDropdown.Item defaultactivekey="#">
 								Arenas sanitarias
 							</NavDropdown.Item>
 							<NavDropdown.Item href="#">Alimento para perros</NavDropdown.Item>
