@@ -39,13 +39,22 @@
   }
 }
 .listaProductos {
-    display: flex;
-    width: 100%;
-    max-width: 60%;
-    margin: 0 auto;
+
     justify-content: center;
     padding-top: 50px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-style: normal;
+}
+
+.itemContainer {
+  width: 16rem;
+}
+
+footer {
+  background-color: rgba(33,37,41);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
