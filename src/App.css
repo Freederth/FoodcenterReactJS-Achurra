@@ -47,8 +47,23 @@
     font-style: normal;
 }
 
+
+.items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 40px 0 40px 0;
+	gap: 20px;
+}
 .itemContainer {
-  width: 16rem;
+  width: 100%;
+  display: flex;
+	flex-direction: row;
+	align-items: center;
+  }
+
+main{
+  width: 100%;
+  overflow: hidden;
 }
 
 footer {
@@ -58,3 +73,4 @@ footer {
   font-weight: 500;
   font-style: normal;
 }
+

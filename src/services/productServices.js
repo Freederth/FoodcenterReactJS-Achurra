@@ -8,6 +8,7 @@ const arrayItems = [
 		title: "Perro cachorro",
 		description: "	Vitalcan Complete perro junior razas medianas y grandes",
 		pictureUrl: img4,
+		price: 12000,
 		stock: "10",
 		initial: "1"
 	},
@@ -15,6 +16,7 @@ const arrayItems = [
 		title: "Perro adulto",
 		description: "Vitalcan Complete perro adulto razas medianas y grandes",
 		pictureUrl: img1,
+		price: 18000,
 		stock: "4",
 		initial: "1"
 	},
@@ -22,6 +24,7 @@ const arrayItems = [
 		title: "Gato adulto",
 		description: "Vitalcan Complete gato adulto control peso",
 		pictureUrl: img3,
+		price: 17000,
 		stock: "0",
 		initial: "0"
 	},
@@ -29,6 +32,7 @@ const arrayItems = [
 		title: "Gato cachorro",
 		description: "Vitalcan Complete gatos cachorros para toda raza",
 		pictureUrl: img2,
+		price: 20000,
 		stock: "8",
 		initial: "1"
 	}

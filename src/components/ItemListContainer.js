@@ -10,14 +10,16 @@ const ItemListContainer = ({ saludo }) => {
 	const [arrayItems, setarrayItems] = useState([]);
 	productServices().then(res => {
 		setarrayItems(res);
+		console.log(res);
 	});
 
 	return (
 		<Container>
 			<h3>{saludo}</h3>
 			<br />
-
-			<ItemList items={arrayItems}></ItemList>
+			<div className="itemContainer">
+				<ItemList items={arrayItems}></ItemList>
+			</div>
 		</Container>
 	);
 };

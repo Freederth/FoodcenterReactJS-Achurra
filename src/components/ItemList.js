@@ -7,6 +7,7 @@ const ItemList = ({ items }) => {
 			title={item.title}
 			description={item.description}
 			pictureUrl={item.pictureUrl}
+			price={item.price}
 			stock={item.stock}
 			initial={item.initial}
 		></Item>
