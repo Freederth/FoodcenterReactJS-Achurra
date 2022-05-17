@@ -10,7 +10,6 @@ function Home() {
 			<main className="listaProductos">
 				{/* le entrego un texto por prop a ItemListContainer */}
 				<ItemListContainer saludo="Bienvenidos a mi tienda de alimentos"></ItemListContainer>
-				{/* <ItemDetailContainer></ItemDetailContainer> */}
 			</main>
 			<footer>
 				<FooterPage></FooterPage>

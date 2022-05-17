@@ -33,8 +33,8 @@
 ## Desafío entregable 6
 
 - Creé componente ItemDetail e ItemDetailContainer.
-- Al apretar cada producto se va a /detail/:{id} , pero todavía no sé porqué no me muestra el producto detallado.
-- Me quedé algo corta realmente. Espero poder arreglar todo para la primera entrega.
+- Al apretar cada producto se va a /detail/:{id}, carga y muesta una card, además de un detalle en texto.
+- Ahora también el Home carga.
 
 Isabel Achurra.
 

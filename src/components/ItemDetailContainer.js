@@ -3,8 +3,8 @@ import { useParams } from "react-router";
 
 import ItemDetail from "./ItemDetail";
 import productServices from "../services/productServices";
-
-import spinner from "../assets/spinning.gif";
+import LoadingSpinner from "./LoadingSpinner";
+import FooterPage from "./FooterPage";
 
 const ItemDetailContainer = () => {
 	let id = useParams();
@@ -23,13 +23,15 @@ const ItemDetailContainer = () => {
 	return (
 		<div>
 			{isLoading ? (
-				<div>
-					<img src={spinner} alt="carga" />
-				</div>
+				<LoadingSpinner></LoadingSpinner>
 			) : (
-				<div className="detailContainer">
-					<ItemDetail items={arrayItems2}></ItemDetail>
-				</div>
+				<>
+					<div className="detailContainer">
+						<ItemDetail items={arrayItems2}></ItemDetail>
+					</div>
+
+					<FooterPage></FooterPage>
+				</>
 			)}
 		</div>
 	);
