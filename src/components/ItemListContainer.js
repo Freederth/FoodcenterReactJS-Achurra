@@ -29,7 +29,6 @@ const ItemListContainer = ({ saludo }) => {
 					</div>
 				</Container>
 			)}
-			;
 		</div>
 	);
 };
