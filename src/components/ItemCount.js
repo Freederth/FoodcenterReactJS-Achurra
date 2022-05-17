@@ -29,7 +29,7 @@ const ItemCount = props => {
 			</Button>
 			<br />
 			<br />
-			<Button variant="outline-light">Agregar al carrito</Button>
+			<Button variant="secondary">Agregar al carrito</Button>
 			<br />
 			<br />
 		</div>

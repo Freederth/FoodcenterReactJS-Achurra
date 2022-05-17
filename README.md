@@ -29,7 +29,12 @@
 - Implementé un async promise que hace que los items se rendericen a los 2 segundos de espera, es llamado desde productServices.
 - Mis productos se muestran 2 segundos después de que se muestre el título y el header.
 - Agregué un footer, ya que se veía pelada la página.
-- Tengo que arreglar el CSS que me imprime el array de objetos todo feo, habia abajo.
+
+## Desafío entregable 6
+
+- Creé componente ItemDetail e ItemDetailContainer.
+- Al apretar cada producto se va a /detail/:{id} , pero todavía no sé porqué no me muestra el producto detallado.
+- Me quedé algo corta realmente. Espero poder arreglar todo para la primera entrega.
 
 Isabel Achurra.
 

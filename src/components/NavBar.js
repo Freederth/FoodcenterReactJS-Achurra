@@ -26,12 +26,14 @@ const NavBar = () => {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="me-auto">
-						<Nav.Link>
+						<Container>
 							<Link to="/about">Nosotros</Link>
-						</Nav.Link>
-						<Nav.Link>
+						</Container>
+
+						<Container>
 							<Link to="/contact">Contacto</Link>
-						</Nav.Link>
+						</Container>
+
 						<NavDropdown title="Productos" id="collasible-nav-dropdown">
 							<NavDropdown.Item>
 								<Link className="Link" to="#">
@@ -51,11 +53,11 @@ const NavBar = () => {
 						</NavDropdown>
 					</Nav>
 					<Nav>
-						<Nav.Link eventKey={2}>
+						<Container>
 							<Link className="Link" to="#">
 								<CartWidget></CartWidget>
 							</Link>
-						</Nav.Link>
+						</Container>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

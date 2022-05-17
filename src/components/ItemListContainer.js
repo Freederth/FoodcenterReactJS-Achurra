@@ -10,7 +10,6 @@ const ItemListContainer = ({ saludo }) => {
 	const [arrayItems, setarrayItems] = useState([]);
 	productServices().then(res => {
 		setarrayItems(res);
-		console.log(res);
 	});
 
 	return (
