@@ -4,25 +4,31 @@ import { Card } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = item => {
-	console.log("trolo", item);
 	return (
 		<div className="itemDetail">
 			<Card bg="secondary" text="light" style={{ width: "18rem" }}>
 				<Card.Text>
 					<br />
-					<span>{item.title}</span>
+					<span>{item.items.title}</span>
 					<br />
 					<span>
-						<span>${item.price}</span>
+						<span>${item.items.price}</span>
 					</span>
 				</Card.Text>
 
-				<Card.Img variant="top" src={item.pictureUrl} alt="foto de producto" />
+				<Card.Img
+					variant="top"
+					src={item.items.pictureUrl}
+					alt="foto de producto"
+				/>
 
 				<Card.Body>
-					<span>{item.description}</span> <br /> <br />
+					<span>{item.items.description}</span> <br /> <br />
 					{/* aquí llamo el componente ItemCount */}
-					<ItemCount stock={item.stock} initial={item.initial}></ItemCount>
+					<ItemCount
+						stock={item.items.stock}
+						initial={item.items.initial}
+					></ItemCount>
 				</Card.Body>
 			</Card>
 		</div>

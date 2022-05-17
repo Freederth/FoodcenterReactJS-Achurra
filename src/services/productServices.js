@@ -11,8 +11,8 @@ const arrayItems = [
 		pictureUrl: img4,
 		price: 12000,
 		categoría: "perro",
-		stock: "10",
-		initial: "1"
+		stock: 10,
+		initial: 1
 	},
 	{
 		id: 2,
@@ -21,8 +21,8 @@ const arrayItems = [
 		pictureUrl: img1,
 		price: 18000,
 		categoría: "perro",
-		stock: "4",
-		initial: "1"
+		stock: 4,
+		initial: 1
 	},
 	{
 		id: 3,
@@ -31,8 +31,8 @@ const arrayItems = [
 		pictureUrl: img3,
 		price: 17000,
 		categoría: "gato",
-		stock: "0",
-		initial: "0"
+		stock: 0,
+		initial: 0
 	},
 	{
 		id: 4,
@@ -41,8 +41,8 @@ const arrayItems = [
 		pictureUrl: img2,
 		price: 20000,
 		categoría: "gato",
-		stock: "8",
-		initial: "1"
+		stock: 8,
+		initial: 1
 	}
 ];
 function delay(ms) {
