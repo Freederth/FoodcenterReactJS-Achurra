@@ -1,7 +1,5 @@
 import React from "react";
 import ItemListContainer from "../components/ItemListContainer";
-// import ItemDetailContainer from "../components/ItemDetailContainer";
-
 import FooterPage from "../components/FooterPage";
 
 function Home() {

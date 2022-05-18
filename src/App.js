@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Componentes
 import NavBar from "./components/NavBar";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemListContainer from "./components/ItemListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //las Views
@@ -25,6 +26,7 @@ function App() {
 						<Route path="/about" element={<About />} />
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/detail/:id" element={<ItemDetailContainer />} />
+						<Route path="/category/:category" element={<ItemListContainer />} />
 					</Routes>
 				</header>
 			</div>

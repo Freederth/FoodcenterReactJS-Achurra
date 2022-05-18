@@ -8,7 +8,7 @@ import FooterPage from "./FooterPage";
 
 const ItemDetailContainer = () => {
 	let id = useParams();
-	let userID = id.id;
+	let userID = parseInt(id.id);
 
 	const [arrayItems2, setarrayItems] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +29,6 @@ const ItemDetailContainer = () => {
 					<div className="detailContainer">
 						<ItemDetail items={arrayItems2}></ItemDetail>
 					</div>
-
 					<FooterPage></FooterPage>
 				</>
 			)}

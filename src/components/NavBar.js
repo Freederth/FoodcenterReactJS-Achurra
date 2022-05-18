@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 // este navbar es un componente sacado de react-bootstrap
-const NavBar = () => {
+const NavBar = item => {
 	return (
 		<Navbar
 			className="Navigation"
@@ -36,17 +36,17 @@ const NavBar = () => {
 
 						<NavDropdown title="Productos" id="collasible-nav-dropdown">
 							<NavDropdown.Item>
-								<Link className="Link" to="#">
+								<Link className="Link" to="/category/arena">
 									Arenas sanitarias
 								</Link>
 							</NavDropdown.Item>
 							<NavDropdown.Item>
-								<Link className="Link" to="#">
+								<Link className="Link" to="/category/perro">
 									Alimento para perros
 								</Link>
 							</NavDropdown.Item>
 							<NavDropdown.Item>
-								<Link className="Link" to="#">
+								<Link className="Link" to="/category/gato">
 									Alimento para gatos
 								</Link>
 							</NavDropdown.Item>

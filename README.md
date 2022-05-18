@@ -36,6 +36,11 @@
 - Al apretar cada producto se va a /detail/:{id}, carga y muesta una card, además de un detalle en texto.
 - Ahora también el Home carga.
 
+## Preentrega 1
+
+- Las categorías se llaman a través de un filter.
+- Arreglé el /detail/:{id}, que antes lo forzaba.
+
 Isabel Achurra.
 
 <!-- # Getting Started with Create React App

@@ -49,16 +49,18 @@
 
 
 .items {
-	display: grid;
+
+  width: 100%;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+.itemContainer {
+  display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	margin: 40px 0 40px 0;
 	gap: 20px;
-}
-.itemContainer {
-  width: 100%;
-  display: flex;
-	flex-direction: row;
-	align-items: center;
   }
 
   .detailText {

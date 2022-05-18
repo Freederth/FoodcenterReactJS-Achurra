@@ -2,6 +2,7 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import img4 from "../assets/img4.png";
+import imgSand from "../assets/imgSand.png";
 
 const arrayItems = [
 	{
@@ -59,17 +60,33 @@ const arrayItems = [
 			"VitalCan® Complete Kitten es ideal para gatos cachorros hasta los 12 meses, tiene todo lo que necesitan!. Este alimento tiene un sabor irresistible, contribuye a una inmunidad potenciada y a un óptimo crecimiento.",
 		ingredients:
 			"Arroz, harina de pollo, harina de carne, maíz, gluten de maíz, harina de soja micronizada,harina de germen de maíz, aceite de pollo, aceite vegetal, grasa bovina, pulpa de remolacha, aceite de pescado, levadura de cerveza, trigo, harina de trigo, germen de trigo, manano oligosacáridos (MOS), fructooligosacáridos (FOS), saborizantes naturales (hidrolizado de vísceras de pollo), sal, metionina, lisina, antioxidantes (extracto de romero, TBHQ, BHT, BHA), taurina, sorbato de potasio, extracto de Yucca schidigera, colina, zeolita, cloruro de potasio, nucleótidos, albúmina de huevo y núcleo vitamínico – mineral: vitaminas: A, D3, E, K3, B1, B2, B6, B12, biotina, ácido fólico, ácido nicotínico, ácido pantoténico, vitamina C. Minerales: yodo, hierro, manganeso. Cobre, selenio y zinc como minerales quelados."
+	},
+	{
+		id: 5,
+		title: "Arena sanitaria",
+		description:
+			"Canada Litter Arena sanitaria para gatos, con olor a talco para bebés.",
+		pictureUrl: imgSand,
+		price: 15000,
+		category: "arena",
+		stock: 20,
+		initial: 1,
+		details:
+			"osee una capacidad de absorción del 350% (3,5 veces su peso). Las cualidades excepcionales de esta arena son atribuidas a su alta capacidad de aglomeración y sus propiedades de absorción, con resultados que se observan inmediatamente con la formación de grumos del producto cuando se moja, haciendo fácil el retiro de las deposiciones. Posee un perfume a base de aceites esenciales de polvo para bebés, el cual, no es agresivo para el gato y fue diseñado para eliminar y controlar los olores en la bandeja. La bentonita es una arcilla mineral con las características de expansión y absorción. ",
+		ingredients: "Hecha de bentonita de sodio y producida en Canadá."
 	}
 ];
 function delay(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const productServices = async id => {
+const productServices = async (id = null, category) => {
 	await delay(2000);
 	if (!!id) {
-		const item = arrayItems[id - 1];
-		return item;
+		return arrayItems.find(item => item.id === id) || {};
+	}
+	if (!!category) {
+		return arrayItems.filter(item => item.category === category) || [];
 	}
 	return arrayItems;
 };
