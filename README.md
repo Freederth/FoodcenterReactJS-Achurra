@@ -41,7 +41,14 @@
 - Las categorías se llaman a través de un filter.
 - Arreglé el /detail/:{id}, que antes lo forzaba.
 
-Isabel Achurra.
+## Desafío entregable 7
+
+- Cambié el estilo de Items.
+- ItemDetails ahora recibe el ItemCount y al agregar al carro, te lleva a /cart.
+
+### Autor
+
+Isabel Achurra - 2022 - Curso ReactJS de CoderHouse.
 
 <!-- # Getting Started with Create React App
 

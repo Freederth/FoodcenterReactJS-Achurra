@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import Cart from "./views/Cart";
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/detail/:id" element={<ItemDetailContainer />} />
 						<Route path="/category/:category" element={<ItemListContainer />} />
+						<Route path="/cart" element={<Cart />} />
 					</Routes>
 				</header>
 			</div>

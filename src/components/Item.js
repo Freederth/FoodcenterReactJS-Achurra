@@ -1,7 +1,6 @@
 import React from "react";
-import { Card, Accordion } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount";
 
 const Item = item => {
 	return (
@@ -27,19 +26,11 @@ const Item = item => {
 					/>
 				</Link>
 				<Card.Body>
-					<Accordion>
-						<Accordion.Item eventKey="0" variant="dark">
-							<Accordion.Header>¡Lo quiero!</Accordion.Header>
-							<Accordion.Body>
-								<span>{item.description}</span> <br /> <br />
-								{/* aquí llamo el componente ItemCount */}
-								<ItemCount
-									stock={item.stock}
-									initial={item.initial}
-								></ItemCount>
-							</Accordion.Body>
-						</Accordion.Item>
-					</Accordion>
+					<Button variant="dark">
+						<Link className="letraLink" to={`/detail/${item.id}`}>
+							¡Lo quiero!
+						</Link>
+					</Button>
 				</Card.Body>
 			</Card>
 

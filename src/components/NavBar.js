@@ -54,7 +54,7 @@ const NavBar = item => {
 					</Nav>
 					<Nav>
 						<Container>
-							<Link className="Link" to="#">
+							<Link className="Link" to="/cart">
 								<CartWidget></CartWidget>
 							</Link>
 						</Container>
