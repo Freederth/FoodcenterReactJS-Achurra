@@ -14,6 +14,7 @@ const arrayItems = [
 		category: "perro",
 		stock: 10,
 		initial: 1,
+		quantity: 0,
 		details:
 			"VitalCan® Complete Perro Cachorro Razas medianas y grandes es ideal para perros junior de razas medianas y grandes hasta los 18 meses, tiene todo lo que necesitan!. Este alimento les proporciona mayor vitalidad por sus proteínas de excelente calidad, un pelo más brillante por el contenido de omega 6, vitamina A, Biotina, ácido pantoténico y zinc y a su vez, unas heces más firmes por los prebióticos, zeolita y yucca adicionada.",
 		ingredients:
@@ -28,6 +29,7 @@ const arrayItems = [
 		category: "perro",
 		stock: 4,
 		initial: 1,
+		quantity: 0,
 		details:
 			"VitalCan® Complete Perro adulto Raza Mediana y Grande es ideal para perros adultos de razas medianas de 12 meses a 7 años y grandes de 18 meses a 7 años, tiene todo lo que necesitan!. Este alimento les proporciona mayor vitalidad por sus proteínas de excelente calidad, un pelo más brillante por el contenido de omega 6, vitamina A, Biotina, ácido pantoténico y zinc y a su vez, unas heces más firmes por los prebióticos, zeolita y yucca adicionada.",
 		ingredients:
@@ -42,6 +44,7 @@ const arrayItems = [
 		category: "gato",
 		stock: 0,
 		initial: 0,
+		quantity: 0,
 		details:
 			"VitalCan® Complete Gatos Adultos Adulto Control de Peso es ideal para gatos adultos con tendencia al sobrepeso. Este alimento ayudará paulatinamente a mantener una silueta ideal, un pelo brillante y heces más firmes.",
 		ingredients:
@@ -56,6 +59,7 @@ const arrayItems = [
 		category: "gato",
 		stock: 8,
 		initial: 1,
+		quantity: 0,
 		details:
 			"VitalCan® Complete Kitten es ideal para gatos cachorros hasta los 12 meses, tiene todo lo que necesitan!. Este alimento tiene un sabor irresistible, contribuye a una inmunidad potenciada y a un óptimo crecimiento.",
 		ingredients:
@@ -71,6 +75,7 @@ const arrayItems = [
 		category: "arena",
 		stock: 20,
 		initial: 1,
+		quantity: 0,
 		details:
 			"osee una capacidad de absorción del 350% (3,5 veces su peso). Las cualidades excepcionales de esta arena son atribuidas a su alta capacidad de aglomeración y sus propiedades de absorción, con resultados que se observan inmediatamente con la formación de grumos del producto cuando se moja, haciendo fácil el retiro de las deposiciones. Posee un perfume a base de aceites esenciales de polvo para bebés, el cual, no es agresivo para el gato y fue diseñado para eliminar y controlar los olores en la bandeja. La bentonita es una arcilla mineral con las características de expansión y absorción. ",
 		ingredients: "Hecha de bentonita de sodio y producida en Canadá."

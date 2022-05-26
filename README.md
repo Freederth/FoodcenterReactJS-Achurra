@@ -46,6 +46,10 @@
 - Cambié el estilo de Items.
 - ItemDetails ahora recibe el ItemCount y al agregar al carro, te lleva a /cart.
 
+## Desafío entregable 8
+
+- Creé el CartContext, no hace nada aún, pero ahí está.
+
 ### Autor
 
 Isabel Achurra - 2022 - Curso ReactJS de CoderHouse.

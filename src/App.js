@@ -15,24 +15,32 @@ import About from "./views/About";
 import Contact from "./views/Contact";
 import Cart from "./views/Cart";
 
+// Provider
+import { CartProvider } from "./context/CartContext";
+
 function App() {
 	return (
-		<Router>
-			<div className="App">
-				<header>
-					{/* hola soy el navbar */}
-					<NavBar></NavBar>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/detail/:id" element={<ItemDetailContainer />} />
-						<Route path="/category/:category" element={<ItemListContainer />} />
-						<Route path="/cart" element={<Cart />} />
-					</Routes>
-				</header>
-			</div>
-		</Router>
+		<CartProvider>
+			<Router>
+				<div className="App">
+					<header>
+						{/* hola soy el navbar */}
+						<NavBar></NavBar>
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/about" element={<About />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route path="/detail/:id" element={<ItemDetailContainer />} />
+							<Route
+								path="/category/:category"
+								element={<ItemListContainer />}
+							/>
+							<Route path="/cart" element={<Cart />} />
+						</Routes>
+					</header>
+				</div>
+			</Router>
+		</CartProvider>
 	);
 }
 
