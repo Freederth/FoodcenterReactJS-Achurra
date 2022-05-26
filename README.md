@@ -48,7 +48,7 @@
 
 ## Desafío entregable 8
 
-- Creé el CartContext, no hace nada aún, pero ahí está.
+- Creé el CartContext y le puse las funciones que se le pedía.
 
 ### Autor
 
