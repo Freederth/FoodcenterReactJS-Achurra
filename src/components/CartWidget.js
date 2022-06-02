@@ -12,9 +12,9 @@ const CartWidget = () => {
 		<>
 			<button type="button" class="btn btn-dark">
 				<div className="iconito"> {elIcono}</div>
-				{Carrito.length > 0 ? (
+				{/* {Carrito.length > 0 ? (
 					<span>{Carrito.reduce((a, b) => a + b.count, 0)}</span>
-				) : null}
+				) : null} */}
 			</button>
 		</>
 	);

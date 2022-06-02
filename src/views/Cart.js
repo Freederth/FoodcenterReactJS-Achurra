@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
 import { CartContext } from "../context/CartContext";
-import FooterPage from "./FooterPage";
-import CartItem from "./CartItem";
+import FooterPage from "../components/FooterPage";
+import CartItem from "../components/CartItem";
 
 const Cart = () => {
 	const { carrito } = useContext(CartContext);

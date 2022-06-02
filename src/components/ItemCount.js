@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-	const [count, setCount] = useState(parseInt(initial));
+	let [count, setCount] = useState(parseInt(initial));
 
 	const sumaProducto = () => {
 		// comprobación de stock
@@ -21,17 +21,29 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
 	return (
 		<div className="itemcount-container">
-			<Button variant="danger" onClick={() => restaProducto()}>
+			<Button
+				variant="danger"
+				onClick={() => (count > 0 ? restaProducto() : (count = 0))}
+			>
 				-
 			</Button>
 			<span> {count} </span>
-			<Button variant="success" onClick={() => sumaProducto()}>
+			<Button
+				variant="success"
+				onClick={() => (count > 0 ? sumaProducto() : null)}
+			>
 				+
 			</Button>
 			<br />
 			<br />
 			<Link to={`/cart/`}>
-				<Button variant="secondary" onClick={() => onAdd(count)}>
+				<Button
+					variant="secondary"
+					onClick={() => {
+						onAdd(count);
+						setCount(0);
+					}}
+				>
 					Agregar al carrito
 				</Button>
 			</Link>

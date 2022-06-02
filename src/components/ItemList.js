@@ -3,15 +3,15 @@ import React from "react";
 
 const ItemList = ({ items }) => {
 	return (
-		<div>
-			{items.map(iteracion => {
+		<>
+			{items.map(itera => {
 				return (
-					<div className="col-md-4" key={iteracion.id}>
-						<Item item={iteracion} />
+					<div className="col-md-4" key={itera.id}>
+						<Item item={itera} />
 					</div>
 				);
 			})}
-		</div>
+		</>
 	);
 };
 
