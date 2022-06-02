@@ -1,75 +1,36 @@
 import React, { createContext, useState } from "react";
 
-export const CartContext = createContext();
-
-const actualProducts = [];
+export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-	const addItem = (
-		id,
-		item,
-		pictureUrl,
-		price,
-		category,
-		stock,
-		initial,
-		quantity,
-		details,
-		ingredients
-	) => {
-		const newProduct = {
-			id: id,
-			title: item,
-			pictureUrl: pictureUrl,
-			price: price,
-			category: category,
-			stock: stock,
-			initial: initial,
-			quantity: quantity,
-			details: details,
-			ingredients: ingredients
-		};
-
-		const found = items.find(item => item.id === id);
-
-		if (!found) {
-			actualProducts.push(newProduct);
-			setItems(actualProducts);
-
-			console.log(items);
-		}
-	};
-
-	const removeItem = itemId => {
-		let found = false;
-
-		items.forEach((item, index, arr) => {
-			if (item.id === itemId) {
-				found = index;
-			}
-		});
-
-		if (found) {
-			const arrayNuevo = actualProducts.push.splice(found, 1);
-			setItems(arrayNuevo);
-		} else {
-			console.log("Producto no encontrado");
-		}
-	};
-
-	const clear = () => [setItems([])];
+	const [carrito, setCarrito] = useState([]);
 
 	const isInCart = id => {
-		const found = items.find(item => item.id === id);
-
-		if (found) {
-			return true;
-		} else {
-			return false;
-		}
+		return carrito.some(el => el.item.id === id);
 	};
 
-	const [items, setItems] = useState(actualProducts);
+	const addExistingItem = (item, count) => {
+		let newcarrito = carrito;
+		let existingItem = newcarrito.find(el => el.item.id === item.id);
+		existingItem.quant += count;
+		newcarrito[newcarrito.findIndex(el => el.item.id === item.id)] =
+			existingItem;
+		setCarrito(newcarrito);
+	};
+
+	const addItem = (item, count) => {
+		isInCart(item.id)
+			? addExistingItem(item, count)
+			: setCarrito([...carrito, { item: item, count: count }]);
+	};
+
+	const removeItem = item => {
+		setCarrito(carrito.filter(el => el.item.id !== item));
+	};
+
+	const clear = () => {
+		setCarrito([]);
+	};
 
 	return (
 		<CartContext.Provider value={[addItem, removeItem, clear, isInCart]}>

@@ -50,6 +50,10 @@
 
 - Creé el CartContext y le puse las funciones que se le pedía.
 
+## Desafío entregable 9
+
+- Trabajé los contextos para que se mostraran los productos que se compran.
+
 ### Autor
 
 Isabel Achurra - 2022 - Curso ReactJS de CoderHouse.

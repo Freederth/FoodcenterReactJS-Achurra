@@ -2,19 +2,17 @@ import Item from "./Item";
 import React from "react";
 
 const ItemList = ({ items }) => {
-	return items.map(item => (
-		<Item
-			key={item.id}
-			id={item.id}
-			title={item.title}
-			description={item.description}
-			pictureUrl={item.pictureUrl}
-			price={item.price}
-			category={item.category}
-			stock={item.stock}
-			initial={item.initial}
-		></Item>
-	));
+	return (
+		<div>
+			{items.map(iteracion => {
+				return (
+					<div className="col-md-4" key={iteracion.id}>
+						<Item item={iteracion} />
+					</div>
+				);
+			})}
+		</div>
+	);
 };
 
 export default ItemList;
