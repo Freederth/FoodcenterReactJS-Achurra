@@ -1,36 +1,57 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import {
+	collection,
+	query,
+	where,
+	getDocs,
+	documentId
+} from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
 
 import ItemDetail from "./ItemDetail";
-import productServices from "../services/productServices";
 import LoadingSpinner from "./LoadingSpinner";
-import FooterPage from "./FooterPage";
 
 const ItemDetailContainer = () => {
-	let id = useParams();
-	let userID = parseInt(id.id);
-
-	const [arrayItems2, setarrayItems] = useState([]);
+	const [comidaData, setComidaData] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
+	const { id } = useParams();
+
+	// let comidaId = id.id;
+
+	// console.log(comidaId);
+
 	useEffect(() => {
-		productServices(userID).then(res => {
-			setarrayItems(res);
+		const getComidaData = async () => {
+			const q = query(
+				collection(db, "Productos"),
+				where(documentId(), "==", id)
+			);
+			const docs = [];
+			const querySnapshot = await getDocs(q);
+			// console.log(querySnapshot);
+			querySnapshot.forEach(doc => {
+				docs.push({ ...doc.data(), id: doc.id });
+			});
+			setComidaData(docs);
+		};
+		getComidaData();
+		setTimeout(() => {
 			setIsLoading(false);
-		});
-	}, [userID]);
+		}, 300);
+	}, [id]);
 
 	return (
 		<div>
 			{isLoading ? (
-				<LoadingSpinner></LoadingSpinner>
+				<div className="Spinner">
+					<LoadingSpinner />
+				</div>
 			) : (
-				<>
-					<div className="detailContainer">
-						<ItemDetail items={arrayItems2}></ItemDetail>
-					</div>
-					<FooterPage></FooterPage>
-				</>
+				comidaData.map(comidaData => {
+					return <ItemDetail item={comidaData} />;
+				})
 			)}
 		</div>
 	);

@@ -2,26 +2,35 @@ import React, { createContext, useState } from "react";
 
 export const CartContext = createContext([]);
 
-export const CartProvider = ({ children }) => {
-	const [carrito, setCarrito] = useState([]);
+export const CartProvider = ({ defaultValue = [], children }) => {
+	const [carrito, setCarrito] = useState(defaultValue);
+
+	const getFromCart = id => {
+		return carrito.find(obj => obj.id === id);
+	};
 
 	const isInCart = id => {
-		return carrito.some(el => el.item.id === id);
+		return id === undefined ? undefined : getFromCart !== undefined;
 	};
 
-	const addExistingItem = (item, count) => {
-		let newcarrito = carrito;
-		let existingItem = newcarrito.find(el => el.item.id === item.id);
-		existingItem.quant += count;
-		newcarrito[newcarrito.findIndex(el => el.item.id === item.id)] =
-			existingItem;
-		setCarrito(newcarrito);
-	};
+	// const addExistingItem = (obj) => {
+	// let newcarrito = carrito;
+	// let existingItem = newcarrito.find(el => el.item.id === item.id);
+	// existingItem.quant += count;
+	// newcarrito[newcarrito.findIndex(el => el.item.id === item.id)] =
+	// 	existingItem;
+	// setCarrito(newcarrito);
+	// };
 
-	const addItem = (item, count) => {
-		isInCart(item.id)
-			? addExistingItem(item, count)
-			: setCarrito([...carrito, { item: item, count: count }]);
+	const addItem = obj => {
+		// isInCart(item.id)
+		// 	? addExistingItem(item, count)
+		// 	: setCarrito([...carrito, { item: item, count: count }]);
+		if (isInCart(obj && obj.id)) {
+			console.log("No se puede agregar, ya está");
+			return;
+		}
+		setCarrito([...carrito, obj]);
 	};
 
 	const removeItem = item => {

@@ -1,16 +1,52 @@
 import Item from "./Item";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const ItemList = ({ items }) => {
+import LoadingSpinner from "./LoadingSpinner";
+
+// FIRBASE - FIRESTORE
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
+
+const ItemList = () => {
+	const [comida, setComida] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		const getComida = async () => {
+			const q = query(collection(db, "Productos"));
+			const docs = [];
+			const querySnapshot = await getDocs(q);
+			// console.log('DATA:', querySnapshot);
+			querySnapshot.forEach(doc => {
+				// console.log('DATA:', doc.data(), 'ID:', doc.id);
+				docs.push({ ...doc.data(), id: doc.id });
+			});
+			// console.log(docs);
+			setComida(docs);
+		};
+		getComida();
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 1000);
+	}, []);
+
 	return (
 		<>
-			{items.map(itera => {
-				return (
-					<div className="col-md-4" key={itera.id}>
-						<Item item={itera} />
-					</div>
-				);
-			})}
+			{isLoading ? (
+				<div className="Spinner">
+					<LoadingSpinner />
+				</div>
+			) : (
+				<>
+					{comida.map(comida => {
+						return (
+							<div className="col-md-4" key={comida.id}>
+								<Item item={comida} />
+							</div>
+						);
+					})}
+				</>
+			)}
 		</>
 	);
 };

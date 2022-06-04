@@ -54,6 +54,10 @@
 
 - Trabajé los contextos para que se mostraran los productos que se compran.
 
+## Desafío entregable 10
+
+- Firebase conectada a la app, que lo llama directamente a la "db" sin usar archivos locales.
+
 ### Autor
 
 Isabel Achurra - 2022 - Curso ReactJS de CoderHouse.

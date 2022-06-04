@@ -10,7 +10,7 @@ const CartWidget = () => {
 	console.log(Carrito);
 	return (
 		<>
-			<button type="button" class="btn btn-dark">
+			<button type="button" className="btn btn-dark">
 				<div className="iconito"> {elIcono}</div>
 				{/* {Carrito.length > 0 ? (
 					<span>{Carrito.reduce((a, b) => a + b.count, 0)}</span>
