@@ -48,14 +48,18 @@
 }
 
 
-.items {
-
+.losItems {
   width: 100%;
   display: flex;
 	flex-direction: column;
 	align-items: center;
   justify-content: center;
 }
+
+.losItems img {
+  max-height: 18rem;
+}
+
 .itemContainer {
   display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -63,17 +67,35 @@
 	gap: 20px;
   }
 
-  .detailText {
+.detailText {
     text-align: justify;
 }
-  .theItems {
+.theItems {
   margin: 40px 0 40px 0;
   width: 100%;
   display: flex;
 	flex-direction: row;
 	align-items: center;
   justify-content: center;
-  }
+}
+
+.catContain{
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 40px 0 40px 0;
+	gap: 20px;
+}
+.catItem{
+  width: 100%;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
+.catItem img {
+  max-height: 18rem;
+}
 
 main{
   width: 100%;
@@ -114,4 +136,18 @@ nav a {
 
 .Spinner {
   justify-content: center;
+}
+#collasible-nav-dropdown a:hover{
+  color: black;
+}
+
+.dropdown-menu {
+  background-color: #212529 !important;
+}
+
+.cont{
+  border: 1px solid #000;
+}
+.cartCositas img {
+  max-height: 150px;
 }

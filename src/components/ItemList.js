@@ -40,7 +40,7 @@ const ItemList = () => {
 				<>
 					{comida.map(comida => {
 						return (
-							<div className="col-md-4" key={comida.id}>
+							<div className="losItems col-md-4" key={comida.id}>
 								<Item item={comida} />
 							</div>
 						);

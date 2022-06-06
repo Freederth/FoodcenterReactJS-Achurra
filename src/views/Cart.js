@@ -1,36 +1,51 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import { CartContext } from "../context/CartContext";
 import FooterPage from "../components/FooterPage";
 import CartItem from "../components/CartItem";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Cart = () => {
 	const { carrito } = useContext(CartContext);
+	const [isLoading, setIsLoading] = useState(true);
 
-	console.log(carrito);
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 2000);
+	});
+
+	//console.log(carrito);
 
 	return (
 		<>
-			<div>
-				{carrito.length > 0 ? (
-					carrito.map(carr => {
-						return (
-							<CartItem
-								key={carr.id}
-								productoCarrito={carr.carrito}
-								pictureUrl={carr.item.pictureUrl}
-								description={carr.item.description}
-								title={carr.item.title}
-								count={carr.count}
-								id={carr.item.id}
-							/>
-						);
-					})
-				) : (
-					<h3>No hay productos en el carrito</h3>
-				)}
-			</div>
-			<FooterPage />
+			{isLoading ? (
+				<LoadingSpinner />
+			) : (
+				<>
+					{carrito.length > 0 ? (
+						carrito.map(carr => {
+							return (
+								<CartItem
+									key={carr.item.id}
+									img={carr.item.img}
+									tipo={carr.item.tipo}
+									producto={carr.item.name}
+									count={carr.count}
+									id={carr.item.id}
+								/>
+							);
+						})
+					) : (
+						<>
+							<br />
+							<h3>No hay productos en el carrito</h3>
+							<br />
+						</>
+					)}
+					<FooterPage />
+				</>
+			)}
 		</>
 	);
 };

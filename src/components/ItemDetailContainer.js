@@ -50,7 +50,7 @@ const ItemDetailContainer = () => {
 				</div>
 			) : (
 				comidaData.map(comidaData => {
-					return <ItemDetail item={comidaData} />;
+					return <ItemDetail item={comidaData} key={comidaData.id} />;
 				})
 			)}
 		</div>

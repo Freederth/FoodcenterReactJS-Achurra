@@ -1,22 +1,21 @@
-import cart from "../assets/cart.svg";
 import React, { useContext } from "react";
+import { Badge, Button } from "react-bootstrap";
+import cart from "../assets/cart.svg";
 
 import { CartContext } from "../context/CartContext";
 
-const CartWidget = () => {
-	const { Carrito } = useContext(CartContext);
-	const elIcono = <img src={cart} alt="" height="20" />;
+const elCarro = <img src={cart} width="18px" alt="carro de compra" />;
 
-	console.log(Carrito);
+const CartWidget = () => {
+	const { carrito } = useContext(CartContext);
+
 	return (
-		<>
-			<button type="button" className="btn btn-dark">
-				<div className="iconito"> {elIcono}</div>
-				{/* {Carrito.length > 0 ? (
-					<span>{Carrito.reduce((a, b) => a + b.count, 0)}</span>
-				) : null} */}
-			</button>
-		</>
+		<Button variant="outline-light">
+			{elCarro} Carrito
+			{carrito.length > 0 ? (
+				<Badge bg="secondary">{carrito.reduce((a, b) => a + b.count, 0)}</Badge>
+			) : null}
+		</Button>
 	);
 };
 

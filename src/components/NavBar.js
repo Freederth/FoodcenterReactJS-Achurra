@@ -34,28 +34,22 @@ const NavBar = item => {
 							<Link to="/contact">Contacto</Link>
 						</Container>
 
-						<NavDropdown title="Productos" id="collasible-nav-dropdown">
+						<NavDropdown title="Categorías" id="collasible-nav-dropdown">
 							<NavDropdown.Item>
-								<Link className="Link" to="/category/arena">
-									Arenas sanitarias
-								</Link>
+								<Link to="/category/arena">Arenas sanitarias</Link>
 							</NavDropdown.Item>
 							<NavDropdown.Item>
-								<Link className="Link" to="/category/perro">
-									Alimento para perros
-								</Link>
+								<Link to="/category/perro">Alimento para perros</Link>
 							</NavDropdown.Item>
 							<NavDropdown.Item>
-								<Link className="Link" to="/category/gato">
-									Alimento para gatos
-								</Link>
+								<Link to="/category/gato">Alimento para gatos</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
 					<Nav>
 						<Container>
-							<Link className="Link" to="/cart">
-								<CartWidget></CartWidget>
+							<Link to="/cart">
+								<CartWidget />
 							</Link>
 						</Container>
 					</Nav>

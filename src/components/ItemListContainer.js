@@ -2,8 +2,10 @@ import { Container } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
+
 import ItemList from "./ItemList";
-import productServices from "../services/productServices";
 import LoadingSpinner from "./LoadingSpinner";
 
 // grilla de productos, por el momento tengo 4 para este demo
@@ -16,10 +18,22 @@ const ItemListContainer = ({ saludo }) => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		productServices(null, userCategory).then(res => {
-			setarrayItems(res);
+		const getCategory = async () => {
+			const q = query(collection(db, "Productos"));
+			const docs = [];
+			const querySnapshot = await getDocs(q);
+			// console.log('DATA:', querySnapshot);
+			querySnapshot.forEach(doc => {
+				// console.log('DATA:', doc.data(), 'ID:', doc.id);
+				docs.push({ ...doc.data(), category: doc.category });
+			});
+			// console.log(docs);
+			setarrayItems(docs);
+		};
+		getCategory();
+		setTimeout(() => {
 			setIsLoading(false);
-		});
+		}, 1000);
 	}, [userCategory]);
 
 	return (
@@ -27,7 +41,7 @@ const ItemListContainer = ({ saludo }) => {
 			<h3>{saludo}</h3>
 			<br />
 			{isLoading ? (
-				<LoadingSpinner></LoadingSpinner>
+				<LoadingSpinner />
 			) : (
 				<Container>
 					<div className="itemContainer">

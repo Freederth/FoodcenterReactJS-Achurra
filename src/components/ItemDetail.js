@@ -1,19 +1,24 @@
-import React from "react";
-import { Card, Container } from "react-bootstrap";
+import React from 'react';
+import { Card, Container } from 'react-bootstrap';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-import ItemCount from "./ItemCount";
+import ItemCount from './ItemCount';
 
-const ItemDetail = ({ item }) => {
-	const { name, img, id, details, ingredients, amount, price, stock, weight } =
+const ItemDetail = ({ item = [] }) => {
+	const { name, img, details, ingredients, amount, price, stock, weight } =
 		item;
+	const Cart = useContext(CartContext);
 
-	console.log(item);
+	const onAdd = (count) => {
+		Cart.addItem(item, count);
+	};
 
 	return (
 		<>
 			<div className="itemDetails">
 				<div className="theItems">
-					<Card bg="secondary" text="light" style={{ width: "18rem" }}>
+					<Card bg="secondary" text="light" style={{ width: '18rem' }}>
 						<Card.Text>
 							<br />
 							<span>{name}</span>
@@ -29,7 +34,13 @@ const ItemDetail = ({ item }) => {
 
 						<Card.Body>
 							<span>¡Quedan: {stock} unidades!</span> <br /> <br />
-							<ItemCount stock={stock} initial={amount} onAdd={0}></ItemCount>
+							<ItemCount
+								stock={stock}
+								initial={amount}
+								onAdd={onAdd}
+								producto={item.name}
+								descripcion={item.details}
+							></ItemCount>
 						</Card.Body>
 					</Card>
 				</div>
