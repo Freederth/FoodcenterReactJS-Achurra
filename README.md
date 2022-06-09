@@ -58,6 +58,10 @@
 
 - Firebase conectada a la app, que lo llama directamente a la "db" sin usar archivos locales.
 
+## Desafío entregable 11
+
+- El submit entrega los datos del usuario al firebase, sólo falta hacer que el push sea del comprador + lo que compró, eso lo planeo tener mañana a primera hora.
+
 ### Autor
 
 Isabel Achurra - 2022 - Curso ReactJS de CoderHouse.

@@ -1,7 +1,8 @@
 import { CartContext } from "../context/CartContext";
 import React, { useContext } from "react";
+import { Button } from "react-bootstrap";
 
-const CartItem = ({ name, description, img, id, count }) => {
+const CartItem = ({ name, img, id, count }) => {
 	const carrito = useContext(CartContext);
 
 	return (
@@ -13,7 +14,6 @@ const CartItem = ({ name, description, img, id, count }) => {
 				<div className="col-md-8">
 					<div className="card-body">
 						<h5 className="card-title">{name}</h5>
-						<p className="card-text">{description}</p>
 						<p className="card-text">
 							<small className="text-muted"></small>
 						</p>
@@ -27,12 +27,13 @@ const CartItem = ({ name, description, img, id, count }) => {
 							;
 						</h6>
 					</div>
-					<button
+					<Button
 						type="button"
 						className="btn-close"
+						variant="danger"
 						aria-label="Close"
 						onClick={() => carrito.removeItem(id)}
-					></button>
+					></Button>
 				</div>
 			</div>
 		</div>

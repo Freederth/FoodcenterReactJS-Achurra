@@ -85,7 +85,7 @@
 	margin: 40px 0 40px 0;
 	gap: 20px;
 }
-.catItem{
+.items{
   width: 100%;
   display: flex;
 	flex-direction: column;
@@ -93,7 +93,7 @@
   justify-content: center;
 }
 
-.catItem img {
+.items img {
   max-height: 18rem;
 }
 
@@ -145,9 +145,7 @@ nav a {
   background-color: #212529 !important;
 }
 
-.cont{
-  border: 1px solid #000;
-}
+
 .cartCositas img {
   max-height: 150px;
 }

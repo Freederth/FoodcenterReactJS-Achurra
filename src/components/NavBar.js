@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 // este navbar es un componente sacado de react-bootstrap
-const NavBar = item => {
+const NavBar = () => {
 	return (
 		<Navbar
 			className="Navigation"
@@ -24,24 +24,24 @@ const NavBar = item => {
 					</Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
+				<Navbar.Collapse>
 					<Nav className="me-auto">
-						<Container>
+						<Nav.Link>
 							<Link to="/about">Nosotros</Link>
-						</Container>
+						</Nav.Link>
 
-						<Container>
+						<Nav.Link>
 							<Link to="/contact">Contacto</Link>
-						</Container>
+						</Nav.Link>
 
-						<NavDropdown title="Categorías" id="collasible-nav-dropdown">
-							<NavDropdown.Item>
+						<NavDropdown title="Categorías">
+							<NavDropdown.Item key="arena">
 								<Link to="/category/arena">Arenas sanitarias</Link>
 							</NavDropdown.Item>
-							<NavDropdown.Item>
+							<NavDropdown.Item key="comidaPerro">
 								<Link to="/category/perro">Alimento para perros</Link>
 							</NavDropdown.Item>
-							<NavDropdown.Item>
+							<NavDropdown.Item key="comidaGato">
 								<Link to="/category/gato">Alimento para gatos</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
