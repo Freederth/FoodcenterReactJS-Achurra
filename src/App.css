@@ -38,6 +38,23 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar-nav li {
+  list-style: none;
+  margin-right: 12px;
+  padding-top: 8px;
+}
+
+.Navigation a:hover{
+  color: #CDBE78;
+}
+
+
 .listaProductos {
 
     justify-content: center;
@@ -141,10 +158,13 @@ nav a {
   color: black;
 }
 
+.dropdown a:hover{
+  color: #CDBE78 !important
+}
+
 .dropdown-menu {
   background-color: #212529 !important;
 }
-
 
 .cartCositas img {
   max-height: 150px;

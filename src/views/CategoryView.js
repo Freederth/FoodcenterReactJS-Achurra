@@ -6,7 +6,7 @@ import { db } from "../firebase/firebaseConfig";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 // COMPONENTS
-import Item from "../components/Item";
+import Item from "../components/Item/Item";
 
 const CategoryView = () => {
 	const [comidaData, setComidaData] = useState([]);

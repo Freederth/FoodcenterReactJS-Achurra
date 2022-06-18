@@ -1,7 +1,9 @@
-import logo from "../assets/logo.svg";
-import CartWidget from "./CartWidget";
 import React from "react";
 import { Link } from "react-router-dom";
+
+// imports intenertnos compoente
+import logo from "../../assets/logo.svg";
+import CartWidget from "../Cart/CartWidget";
 
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
@@ -26,13 +28,14 @@ const NavBar = () => {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse>
 					<Nav className="me-auto">
-						<Nav.Link>
-							<Link to="/about">Nosotros</Link>
-						</Nav.Link>
-
-						<Nav.Link>
-							<Link to="/contact">Contacto</Link>
-						</Nav.Link>
+						<ul>
+							<li>
+								<Link to="/about">Nosotros</Link>
+							</li>
+							<li>
+								<Link to="/contact">Contacto</Link>
+							</li>
+						</ul>
 
 						<NavDropdown title="Categorías">
 							<NavDropdown.Item key="arena">

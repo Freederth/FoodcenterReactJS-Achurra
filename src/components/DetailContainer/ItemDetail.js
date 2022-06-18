@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
 
-import ItemCount from "./ItemCount";
+// Imports de otros componentes
+import { CartContext } from "../../context/CartContext";
+import ItemCount from "../Item/ItemCount";
 
 const ItemDetail = ({ item = [] }) => {
 	const { name, img, amount, price, stock, weight } = item;

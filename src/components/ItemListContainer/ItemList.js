@@ -1,11 +1,12 @@
-import Item from "./Item";
 import React, { useState, useEffect } from "react";
 
-import LoadingSpinner from "./LoadingSpinner";
+//imports de compotnmentse
+import Item from "../Item/Item";
+import LoadingSpinner from "../StaticComponents/LoadingSpinner";
 
 // FIRBASE - FIRESTORE
 import { collection, query, getDocs } from "firebase/firestore";
-import { db } from "../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 
 const ItemList = () => {
 	const [comida, setComida] = useState([]);

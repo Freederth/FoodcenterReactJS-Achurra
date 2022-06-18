@@ -7,10 +7,11 @@ import {
 	getDocs,
 	documentId
 } from "firebase/firestore";
-import { db } from "../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 
+// IMports de componentes
 import ItemDetail from "./ItemDetail";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../StaticComponents/LoadingSpinner";
 
 const ItemDetailContainer = () => {
 	const [comidaData, setComidaData] = useState([]);

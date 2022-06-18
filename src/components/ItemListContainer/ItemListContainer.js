@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 import { collection, query, getDocs } from "firebase/firestore";
-import { db } from "../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 
 import ItemList from "./ItemList";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../StaticComponents/LoadingSpinner";
 
 // grilla de productos, por el momento tengo 4 para este demo
 const ItemListContainer = ({ saludo }) => {

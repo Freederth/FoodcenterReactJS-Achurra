@@ -1,6 +1,8 @@
 import React from "react";
-import ItemListContainer from "../components/ItemListContainer";
-import FooterPage from "../components/FooterPage";
+
+// imports
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import FooterPage from "../components/StaticComponents/FooterPage";
 
 function Home() {
 	return (

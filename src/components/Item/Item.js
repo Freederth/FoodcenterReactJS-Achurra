@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
-	const { name, img, id } = item;
+	const { name, img, id, stock } = item;
 
 	return (
 		<div className="items">
@@ -17,6 +17,7 @@ const Item = ({ item }) => {
 					<Card.Img variant="top" src={img} alt="foto de producto" />
 				</Link>
 				<Card.Body>
+					<Card.Text>Stock: {stock}</Card.Text>
 					<Button variant="dark">
 						<Link className="letraLink" to={`/detail/${id}`}>
 							¡Lo quiero!

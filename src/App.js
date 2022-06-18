@@ -4,8 +4,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Componentes
-import NavBar from "./components/NavBar";
-import ItemDetailContainer from "./components/ItemDetailContainer";
+import NavBar from "./components/StaticComponents/NavBar";
+import ItemDetailContainer from "./components/DetailContainer/ItemDetailContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //las Views

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Badge, Button } from "react-bootstrap";
-import cart from "../assets/cart.svg";
+import cart from "../../assets/cart.svg";
 
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const elCarro = <img src={cart} width="18px" alt="carro de compra" />;
 

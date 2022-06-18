@@ -1,9 +1,18 @@
-import { CartContext } from "../context/CartContext";
 import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
 
+// IMPORTS DE PROYECTO
+import { CartContext } from "../../context/CartContext";
+
+let total = 0;
+
 const CartItem = ({ name, img, id, count }) => {
 	const carrito = useContext(CartContext);
+
+	total = carrito.carrito.reduce(
+		(acc, el) => acc + el.item.price * el.count,
+		0
+	);
 
 	return (
 		<div className="cont">
@@ -18,14 +27,7 @@ const CartItem = ({ name, img, id, count }) => {
 							<small className="text-muted"></small>
 						</p>
 						<h3>{count + " unidades"} </h3>
-						<h6>
-							{"TOTAL: $" +
-								carrito.carrito.reduce(
-									(acc, el) => acc + el.item.price * el.count,
-									0
-								)}
-							;
-						</h6>
+						<h6>{"TOTAL: $" + total}</h6>
 					</div>
 					<Button
 						type="button"
@@ -39,5 +41,7 @@ const CartItem = ({ name, img, id, count }) => {
 		</div>
 	);
 };
+
+export { total };
 
 export default CartItem;
