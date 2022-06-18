@@ -1,7 +1,7 @@
 {
 	"name": "foodcentercppachurra",
 	"version": "0.1.0",
-	"homepage": "https://freederth.github.io/",
+	"homepage": "https://freederth.github.io/FoodcenterReactJS-Achurra/",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.9.0",
