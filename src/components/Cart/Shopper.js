@@ -6,7 +6,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/CartContext";
-import { total } from "./CartItem";
+import { total } from "../../views/Cart";
 import LoadingSpinner from "../StaticComponents/LoadingSpinner";
 import MessageSuccess from "../StaticComponents/MessageSuccess";
 
@@ -53,6 +53,10 @@ const Shopper = () => {
 			});
 	};
 
+	const clear = () => {
+		carrito.clear();
+	};
+
 	return (
 		<div>
 			<div
@@ -76,13 +80,17 @@ const Shopper = () => {
 							</h2>
 
 							<br />
-							<Link style={{ textDecoration: "none" }} to={`/`}>
+							<Link style={{ textDecoration: "none" }} to={`/`} onClick={clear}>
 								<strong> Volver al inicio</strong>
 							</Link>
+							<p>
+								(Guarda tu comprobante, al clickear volver al inicio, se vaciará
+								su carro.)
+							</p>
 						</div>
 					</div>
 				) : (
-					<div className="formcontainer">
+					<div className="formContainer">
 						<div className="container mt-2 form__container d-flex">
 							<div className="container align-self-center position-relative">
 								<div className="row">

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, onAdd, producto }) => {
 	let [count, setCount] = useState(parseInt(initial));
@@ -24,7 +24,7 @@ const ItemCount = ({ stock, initial, onAdd, producto }) => {
 			<br />
 			<Link to={`/cart/`}>
 				<Button
-					variant="secondary"
+					variant="outline-warning"
 					onClick={() => {
 						onAdd(count, producto);
 						setCount(0);

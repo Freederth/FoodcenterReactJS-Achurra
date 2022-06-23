@@ -31,6 +31,7 @@ const CategoryView = () => {
 
 	return (
 		<>
+			<br />
 			<h3>Resultados para: {category}</h3>
 			<div className="catContain">
 				{comidaData.map(data => {

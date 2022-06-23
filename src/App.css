@@ -169,3 +169,15 @@ nav a {
 .cartCositas img {
   max-height: 150px;
 }
+
+.botonEliminacion{
+  padding-top: 58px;
+}
+
+.cartCant{
+  padding-top:50px;
+}
+
+.cartTit{
+  padding-top:50px;
+}

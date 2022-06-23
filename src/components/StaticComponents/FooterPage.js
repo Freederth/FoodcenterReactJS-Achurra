@@ -1,12 +1,11 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
 	return (
-		<MDBFooter color="blue" className="font-small pt-4 mt-4">
-			<MDBContainer fluid className="text-center text-md-left">
-				<MDBRow>
-					<MDBCol md="6">
+		<footer>
+			<div className="font-small pt-4 mt-4">
+				<div className="row g-0">
+					<div className="col-md-6">
 						<h5 className="title">Foodcenter Concepción</h5>
 						<p>¡Lo mejor en alimentación para tu mascota!</p>
 						<p>
@@ -16,8 +15,8 @@ const FooterPage = () => {
 							<br />
 							<strong>Email:</strong> foodcenterccp@gmail.com
 						</p>
-					</MDBCol>
-					<MDBCol md="3">
+					</div>
+					<div className="col-md-3">
 						<h5 className="title">Sociales</h5>
 						<ul>
 							<li className="list-unstyled">
@@ -27,8 +26,8 @@ const FooterPage = () => {
 								<a href="#!">Facebook</a>
 							</li>
 						</ul>
-					</MDBCol>
-					<MDBCol md="3">
+					</div>
+					<div className="col-md-3">
 						<h5 className="title">Otros</h5>
 						<ul>
 							<li className="list-unstyled">
@@ -38,16 +37,23 @@ const FooterPage = () => {
 								<a href="#!">Link 2</a>
 							</li>
 						</ul>
-					</MDBCol>
-				</MDBRow>
-			</MDBContainer>
-			<div className="footer-copyright text-center py-3">
-				<MDBContainer fluid>
-					&copy; {new Date().getFullYear()} Copyright:{" "}
-					<a href="https://github.com/Freederth"> I. Achurra </a>
-				</MDBContainer>
+					</div>
+
+					<div className="footer-copyright text-center py-3">
+						<div className="container-fluid">
+							&copy; {new Date().getFullYear()} Copyright:{" "}
+							<a
+								href="https://github.com/Freederth"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								I. Achurra
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</MDBFooter>
+		</footer>
 	);
 };
 

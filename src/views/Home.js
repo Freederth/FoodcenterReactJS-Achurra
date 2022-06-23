@@ -11,9 +11,7 @@ function Home() {
 				{/* le entrego un texto por prop a ItemListContainer */}
 				<ItemListContainer saludo="Bienvenidos a mi tienda de alimentos"></ItemListContainer>
 			</main>
-			<footer>
-				<FooterPage></FooterPage>
-			</footer>
+			<FooterPage />
 		</div>
 	);
 }

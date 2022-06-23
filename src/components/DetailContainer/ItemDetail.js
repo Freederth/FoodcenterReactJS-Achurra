@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { useContext } from "react";
+import FooterPage from "../StaticComponents/FooterPage";
 
 // Imports de otros componentes
 import { CartContext } from "../../context/CartContext";
@@ -63,6 +64,7 @@ const ItemDetail = ({ item = [] }) => {
 					</p>
 				</Container>
 			</div>
+			<FooterPage />
 		</>
 	);
 };

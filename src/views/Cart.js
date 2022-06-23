@@ -11,6 +11,8 @@ const stylings = {
 	height: "80vh"
 };
 
+let total = 0;
+
 const Cart = () => {
 	const { carrito } = useContext(CartContext);
 	const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +24,8 @@ const Cart = () => {
 	});
 
 	//console.log(carrito);
+
+	total = carrito.reduce((acc, el) => acc + el.item.price * el.count, 0);
 
 	return (
 		<div className="">
@@ -37,6 +41,7 @@ const Cart = () => {
 									<div className="shopito" key={Math.random()}>
 										<CartItem
 											key={carr.item.id}
+											name={carr.item.name}
 											img={carr.item.img}
 											producto={carr.item.name}
 											count={carr.count}
@@ -53,7 +58,13 @@ const Cart = () => {
 							</>
 						)}
 					</div>
+					<div className="elTotal">
+						<br />
+						<h3> {"SU TOTAL ES DE $" + total + " CLP"}</h3>
+						<br />
+					</div>
 					{carrito.length > 0 && <Shopper />}
+
 					<FooterPage />
 				</>
 			)}
@@ -61,3 +72,5 @@ const Cart = () => {
 	);
 };
 export default Cart;
+
+export { total };

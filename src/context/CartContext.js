@@ -12,10 +12,10 @@ export const CartProvider = ({ children }) => {
 	const addExistingItem = (item, count) => {
 		let newcarrito = carrito;
 		let existingItem = newcarrito.find(el => el.item.id === item.id);
-		existingItem.quant += count;
-		newcarrito[newcarrito.findIndex(el => el.item.id === item.id)] =
-			existingItem;
-		setCarrito(newcarrito);
+		existingItem.count += count;
+		if (existingItem.count > existingItem.item.stock) {
+			existingItem.count = existingItem.item.stock;
+		}
 	};
 
 	const addItem = (item, count) => {
