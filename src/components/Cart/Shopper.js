@@ -146,7 +146,7 @@ const Shopper = () => {
 												/>
 											</div>
 											<button
-												className="btscs d-flex justify-content-center w-50 align-self-center btn btn-success"
+												className="btscs d-flex justify-content-center w-50 align-self-center btn btn-info"
 												disabled={
 													!formData.name ||
 													!formData.phone ||
