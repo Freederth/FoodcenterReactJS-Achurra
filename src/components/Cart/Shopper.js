@@ -76,7 +76,12 @@ const Shopper = () => {
 							data-aos-duration="500"
 						>
 							<h2 className="mt-3">
-								{orderId && <MessageSuccess purchaseID={orderId} />}
+								{orderId && (
+									<MessageSuccess
+										purchaseID={orderId}
+										text="¡Gracias por su compra! Su id de transacción es: "
+									/>
+								)}
 							</h2>
 
 							<br />
@@ -141,7 +146,7 @@ const Shopper = () => {
 												/>
 											</div>
 											<button
-												className="btscs d-flex justify-content-center w-50 align-self-center"
+												className="btscs d-flex justify-content-center w-50 align-self-center btn btn-success"
 												disabled={
 													!formData.name ||
 													!formData.phone ||
@@ -157,6 +162,7 @@ const Shopper = () => {
 								</div>
 							</div>
 						</div>
+						<br />
 					</div>
 				)}
 			</div>

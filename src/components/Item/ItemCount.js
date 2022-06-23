@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, onAdd, producto }) => {
 	let [count, setCount] = useState(parseInt(initial));
@@ -22,17 +21,18 @@ const ItemCount = ({ stock, initial, onAdd, producto }) => {
 			</Button>
 			<br />
 			<br />
-			<Link to={`/cart/`}>
-				<Button
-					variant="outline-warning"
-					onClick={() => {
-						onAdd(count, producto);
-						setCount(0);
-					}}
-				>
-					Agregar al carrito
-				</Button>
-			</Link>
+
+			<Button
+				variant="outline-warning"
+				onClick={() => {
+					onAdd(count, producto);
+					setCount(0);
+				}}
+				disabled={count === 0}
+			>
+				Agregar al carrito
+			</Button>
+
 			<br />
 			<br />
 		</div>

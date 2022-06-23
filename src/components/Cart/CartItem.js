@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 // IMPORTS DE PROYECTO
 import { CartContext } from "../../context/CartContext";
 
-const CartItem = ({ name, img, id, count }) => {
+const CartItem = ({ name, img, id, price, count }) => {
 	const carrito = useContext(CartContext);
 
 	return (
@@ -18,7 +18,7 @@ const CartItem = ({ name, img, id, count }) => {
 					<h4 className="text-muted">{name}</h4>
 				</div>
 				<div className="cartCant col-md-3">
-					<h3>{count + " unidades"} </h3>
+					<h4>{count + " x $" + price} </h4>
 				</div>
 				<div className="botonEliminacion col-md-3">
 					<Button
@@ -30,6 +30,7 @@ const CartItem = ({ name, img, id, count }) => {
 					></Button>
 				</div>
 			</div>
+			<br />
 		</div>
 	);
 };
