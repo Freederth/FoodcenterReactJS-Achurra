@@ -95,10 +95,9 @@ Para instalar todas las dependencias del proyecto.
 
 - Ordené los componentes en carpetas para que tenga mayor orden y menos flujo de trabajo.
 
-## Demovideo:
+## Demovideo
 
 https://user-images.githubusercontent.com/10873846/175725209-28a8b8a0-41bc-4388-90eb-0e8b8ec87f86.mp4
-
 
 #### Autor
 
